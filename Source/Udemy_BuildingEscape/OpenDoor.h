@@ -22,6 +22,7 @@ protected:
 
 	void OpenDoor();
 
+	void CloseDoor();
 	class AActor* ActorOwner;
 public:	
 	// Called every frame
@@ -34,4 +35,9 @@ public:
 	class ATriggerVolume* PressurePlate;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	class AActor* ActorThatOpens;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float DoorCloseDelay=1.0f;
+
+	float LastDoorOpenTime;
 };
